@@ -16,16 +16,51 @@ h1 {
 }
 
 .info-box {
-    width: 45%;
+    width: 33%;
     background-color: #000;
     border: 1px solid #0f0;
     padding: 15px;
     margin-top: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 255, 0, 0.4);
+    font-size: smaller; /* Makes text smaller */
+    padding: 2px; /* Adjust padding as needed */
 }
 
 .info-box p, .info-box h2 {
     color: #0f0;
 }
 
+code {
+    background-color: #181818; /* Light gray background, adjust color as needed */
+    padding: 2px;
+    border-radius: 3px;
+}
+
+/* Style for the second div to remove infinite scroll */
+#secondInfoBox {
+    max-height: 940px; /* Adjust the height as needed */
+    overflow-y: hidden; /* Enables scrolling only when the content overflows */
+}
+
+
+@media screen and (max-width: 768px) {
+    #infoBox, #secondInfoBox, #thirdInfoBox {
+        max-height: auto; /* Reset max-height for mobile or set a new value */
+        overflow-y: hidden; /* Adjust overflow as needed */
+        /* Add any other mobile-specific styles here */
+    }
+
+    /* Additional adjustments as needed for individual boxes */
+    #infoBox {
+        /* Mobile specific styles for the first box */
+    }
+    #secondInfoBox {
+
+        max-height: 1500px;
+        /* Mobile specific styles for the second box */
+    }
+    #thirdInfoBox {
+        /* Mobile specific styles for the third box */
+    }
+}
