@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://reallyfreegeoip.org;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico/favicon.ico" type="image/x-icon">
     <title>Visitor Enumeration</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Visitor Enumeration Page</h1>
-   
+    <h3>Welcome to the Visitor Enumeration Page</h3>
+    <img src="/favicon.ico/favicon.ico" alt="Favicon">
+
+    <p></p>
+    <code>
+        This webpage, crafted by MacMeow, serves as an educational showcase, highlighting the extent of information that users inadvertently share while browsing the internet.
+        <br><br>
+        On the left, you'll find an array of details that can be gathered about your device and browser settings. 
+        In the middle, observe a real-time log of your actions, capturing every keystroke and interaction within this window. On the right witness your ip location data. 
+        
+        </code>
+        
     
     <div class="output-container">
         <div class="info-box" id="infoBox">
+          
             <!-- Information from script.js will be displayed here -->
         </div>
         <div class="info-box" id="secondInfoBox">
+            
             <!-- Information from script2.js will be displayed here -->
+        </div>
+
+        <div class="info-box" id="thirdInfoBox">
+            <!-- Information from script3.js will be displayed here -->
         </div>
     </div>
 
     <script src="script.js"></script>
     <script src="script2.js"></script>
+    <script src="script3.js"></script>
+<br><br>
+    <code>Please note that this demonstration is purely for educational purposes; rest assured, no visitor information is permanently recorded or stored.</code>
 </body>
 </html>
