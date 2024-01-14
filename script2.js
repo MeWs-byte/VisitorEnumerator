@@ -4,6 +4,32 @@ document.addEventListener('DOMContentLoaded', () => {
         logUserAction('Key Pressed', event.key);
     });
 
+    document.addEventListener('click', (event) => {
+        if (event.button === 0) { // 0 is the button value for left clicks
+            logUserAction('Left Click', 'Element: ' + event.target.tagName);
+        } else if (event.target.tagName === 'BUTTON') {
+            logUserAction('Button Clicked', event.target.id);
+        }
+    });
+
+    document.addEventListener('mouseover', (event) => {
+        logUserAction('Mouse Over', 'Element: ' + event.target.tagName);
+    });
+    document.addEventListener('mouseout', (event) => {
+        logUserAction('Mouse Out', 'Element: ' + event.target.tagName);
+    });
+
+   // window.addEventListener('devicemotion', (event) => {
+    //    logUserAction('Device Motion', 'Acceleration X: ' + event.acceleration.x);
+   // });
+   // window.addEventListener('deviceorientation', (event) => {
+    //    logUserAction('Device Orientation', 'Alpha: ' + event.alpha);
+    //});
+
+    document.addEventListener('touchforcechange', (event) => {
+        logUserAction('Touch Force', 'Force: ' + event.changedTouches[0].force);
+    });
+
     // Track button clicks
     document.addEventListener('click', (event) => {
         if (event.target.tagName === 'BUTTON') {
@@ -14,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Track mouse movements (can be adjusted for frequency)
     document.addEventListener('mousemove', (event) => {
         // Uncomment below line to log mouse moves, note this will generate a lot of data
-        // logUserAction('Mouse Moved', 'X: ' + event.clientX + ', Y: ' + event.clientY);
+        logUserAction('Mouse Moved', 'X: ' + event.clientX + ', Y: ' + event.clientY);
     });
 
     // Track double clicks
@@ -70,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function logUserAction(action, detail) {
     const secondInfoBox = document.getElementById('secondInfoBox');
+    
     const newContent = '<p>' + action + ': ' + detail + '</p>';
     secondInfoBox.innerHTML = newContent + secondInfoBox.innerHTML;
 }
