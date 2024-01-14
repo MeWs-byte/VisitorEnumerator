@@ -1,0 +1,24 @@
+body {
+    font-family: 'Courier New', monospace;
+    padding: 20px;
+    background-color: #000;
+    color: #0f0;
+    text-align: center;
+}
+
+h1 {
+    color: #0f0;
+}
+
+.info-box {
+    background-color: #000;
+    border: 1px solid #0f0;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.4);
+}
+
+.info-box p, .info-box h2 {
+    color: #0f0;
+}
