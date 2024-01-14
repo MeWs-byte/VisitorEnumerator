@@ -22,6 +22,12 @@ function getVisitorInfo() {
        hardwareConcurrency: navigator.hardwareConcurrency || 'Not Available',
        connectionType: navigator.connection ? navigator.connection.effectiveType : 'Not Available',
        touchPoints: navigator.maxTouchPoints || 'Not Available'
+       batteryCharging: (navigator.battery && navigator.battery.charging) ? 'Charging' : 'Not Charging',
+       screenOrientation: window.screen.orientation ? window.screen.orientation.type : 'Not Available',
+       usedJSHeapSize: performance.memory ? performance.memory.usedJSHeapSize : 'Not Available',
+       totalJSHeapSize: performance.memory ? performance.memory.totalJSHeapSize : 'Not Available',
+       networkDownlink: navigator.connection ? navigator.connection.downlink : 'Not Available'
+
    };
 
    
