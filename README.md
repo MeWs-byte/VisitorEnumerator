@@ -1,2 +1,4 @@
 # VisitorEnumerator
-A simple web page that enumerated the visitors of the website with javascript
+A simple web page that enumerates the visitors of the website with javascript and informs them about it.
+
+
